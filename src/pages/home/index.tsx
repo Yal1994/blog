@@ -20,11 +20,11 @@ export const menus: IMenu[] = [
 	},
 	{
 		title: '文章',
-		path: '/d/article',
+		path: '/article',
 	},
 	{
 		title: 'Github',
-		path: '/d',
+		path: '/article',
 	},
 	{
 		title: '简历',
