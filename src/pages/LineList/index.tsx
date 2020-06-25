@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Skeleton, Button } from 'antd';
-import { Link } from 'react-router-dom';
-import moment from 'moment';
 import './index.less'
 import logo from '@/assets/images/avatar.jpg';
+import React from 'react';
+import { Button, Skeleton } from 'antd';
+import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 
 interface ILineListProps {}

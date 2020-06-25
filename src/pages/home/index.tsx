@@ -5,27 +5,26 @@ import './index.less';
 import { Link } from 'react-router-dom';
 import Separator from '@/components/Separator';
 import { newGuid } from '@/utils/utils';
-import LineList from '../LineList';
+import LineList from '../lineList';
 
-interface Menu {
+export interface IMenu {
 	title: string;
 	path: string;
 	target?: '_blank';
 }
 
-const menus: Menu[] = [
+export const menus: IMenu[] = [
 	{
 		title: '首页',
 		path: '/',
 	},
 	{
 		title: '文章',
-		path: '/article',
+		path: '/d/article',
 	},
 	{
 		title: 'Github',
-		path: '/article',
-		target: '_blank',
+		path: '/d',
 	},
 	{
 		title: '简历',
@@ -46,7 +45,7 @@ const Home: React.FC = () => {
 				</Col>
 			</Row>
 			<Row justify={'center'} gutter={4} style={{margin:0}}>
-				{menus.map((m: Menu) => {
+				{menus.map((m: IMenu) => {
 					return (
 						<Col key={newGuid()}>
 							<Link className={'AppLink'} to={m.path} target={m.target}>
