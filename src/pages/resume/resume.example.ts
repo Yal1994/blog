@@ -36,12 +36,14 @@ interface IResume {
 	education: string;
 	osProjects: IOpenSourceProject[];
 	skills: string[];
-    experiences: IExperience[];
-    github:string,
-    gitee:string
+	experiences: IExperience[];
+	github: string;
+	status: string;
+	gitee: string;
 }
 
 const myResume: IResume = {
+	status: '',
 	city: '',
 	expectCity: '',
 	expectPosition: '',
@@ -50,9 +52,9 @@ const myResume: IResume = {
 	name: '',
 	phone: '',
 	email: '@foxmail.com',
-    site: 'www..cn',
-    github:'https://github.com/Yal1994',
-    gitee:'https://gitee.com/cnylgit',
+	site: 'www..cn',
+	github: 'https://github.com/Yal1994',
+	gitee: 'https://gitee.com/cnylgit',
 	born: 1994,
 	gender: '男',
 	school: '',
@@ -91,12 +93,8 @@ const myResume: IResume = {
 			url: '',
 		},
 	],
-	skills: [
-		
-	],
-	experiences: [
-		
-	],
+	skills: [],
+	experiences: [],
 };
 
 export default myResume;

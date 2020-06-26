@@ -34,7 +34,7 @@ const ResumeContent: React.FunctionComponent<IResumeContentProps> = (props) => {
 							<div className="box bg-gray-lightest p-t-0 p-b-0">
 								<div className="row">
 									<div className="col-4 p-t-10 p-b-10">
-										● {r.name} | {r.gender} | {r.born} | {r.city}
+										● {r.name} | {r.gender} | {r.born} | {r.city} | {r.status}
 									</div>
 									<div className="col-4 p-t-10 p-b-10 border">
 										● {r.education} | {r.school} | {r.major}
@@ -43,10 +43,12 @@ const ResumeContent: React.FunctionComponent<IResumeContentProps> = (props) => {
 										● {r.position} | {r.yearOfWork} 年工作经验
 									</div>
 								</div>
-								<div className="row">
+                                <div className="row">
 									<div className="col-4 p-t-10 p-b-10">
 										● 期望职位：{r.expectPosition}
 									</div>
+								</div>
+								<div className="row">
 									<div className="col-4 p-t-10 p-b-10 border">
 										● 期望城市：{r.expectCity}
 									</div>
