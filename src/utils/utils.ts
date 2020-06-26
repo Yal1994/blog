@@ -24,3 +24,7 @@ export const newGuid = ():string => {
     };
     return `${s4() + s4()}-${s4()}-${s4()}-${s4()}-${s4()}${s4()}${s4()}`;
   };
+
+export const removeLast = (source:Array<any>,ele = '') =>{
+  return source.slice(0,source.lastIndexOf(ele))
+}

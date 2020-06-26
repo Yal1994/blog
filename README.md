@@ -1,5 +1,5 @@
 # 简介
-使用React全家桶+Ant Design 搭建个人博客前台
+使用React全家桶 + TypeScript + Ant Design 搭建个人博客前台
 
 ### 前端技术
 - [x] create-react-app
@@ -17,3 +17,4 @@
 - [ ] 个人简历
 - [ ] 登录登出
 - [ ] 评论/点赞
+

@@ -4,6 +4,8 @@ import styles from './index.module.less'
 import { IMenu, menus } from '../home';
 import { Link } from 'react-router-dom';
 import Search from 'antd/lib/input/Search';
+import RouteList from '@/route';
+import { IRoute } from '@/entity/entity';
 
 const {Header} = Layout
 interface INavProps {
@@ -22,23 +24,25 @@ const Nav: React.FunctionComponent<INavProps> = (props) => {
 						src={'/logo.png'}
 						style={{
 							maxHeight: '100%',
-							maxWidth: '10%',
+							maxWidth: '100%',
 							verticalAlign: 'top',
 							borderRadius: '10px',
 						}}
 					></img>
 				</div>
-				{menus.map((item: IMenu, i: any) => {
-					return (
-						<Link
-							className={styles.cusMenuItem}
-							to={item.path}
-							target={item.target}
-							key={i}
-						>
-							{item.title}
-						</Link>
-					);
+				{RouteList.map((item: IRoute, i: any) => {
+					if(item.isMenu){
+						return (
+							<Link
+								className={styles.cusMenuItem}
+								to={item.path}
+								target={item.target}
+								key={item.path}
+							>
+								{item.title}
+							</Link>
+						);
+					}
 				})}
 				<div style={{ width: '20%', float: 'right' }}>
 					<Search

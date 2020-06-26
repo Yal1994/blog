@@ -1,37 +1,49 @@
-interface IRoute {
-	title: string;
-	path: string;
-    target?: string;
-    component?:React.ReactNode
-}
+import Home from './pages/home';
+import ArticleList from './pages/articleList';
+import Detail from './pages/ArticleItem';
+import { IRoute } from './entity/entity';
+import Resume from './pages/resume';
+
 const RouteList: IRoute[] = [
 	{
 		title: '首页',
-        path: '/',
-        component:() => import('../src/pages/home')
+		path: '/',
+		exact:true,
+		isMenu:true,
+		component:Home,
 	},
 	{
-		title: '文章',
-        path: '/pages/article',
-        component:() => import('../src/pages/articleList')
-	},
-	{
-		title: '项目',
-        path: '/pages/project',
-        component:() => import('../src/pages/project')
+		title: '笔记',
+		path: '/article',
+		exact:true,
+		isMenu:true,
+		component:ArticleList,
 	},
 	{
 		title: '简历',
-		path: '/pages/resume',
+		path: '/resume',
+		exact:true,
+		isMenu:true,
+		component:Resume,
 	},
 	{
-		title: '404',
-		path: '/pages/404',
+		title: '文章',
+		path: '/article/:id',
+		exact:false,
+		component: Detail
 	},
-	{
-		title: '500',
-		path: '/pages/500',
-	},
+	// {
+	// 	title: '简历',
+	// 	path: '/pages/resume',
+	// },
+	// {
+	// 	title: '404',
+	// 	path: '/pages/404',
+	// },
+	// {
+	// 	title: '500',
+	// 	path: '/pages/500',
+	// },
 ];
 
 export default RouteList;

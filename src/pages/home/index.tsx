@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from '@/assets/images/avatar.jpg';
+import avatar from '@/assets/images/avatar.jpg';
 import { Avatar, Row, Col, BackTop } from 'antd';
 import './index.less';
 import { Link } from 'react-router-dom';
 import Separator from '@/components/Separator';
 import { newGuid } from '@/utils/utils';
 import LineList from '../lineList';
+import RouteList from '@/route';
+import { IRoute } from '@/entity/entity';
 
 export interface IMenu {
 	title: string;
@@ -28,7 +30,7 @@ export const menus: IMenu[] = [
 	},
 	{
 		title: '简历',
-		path: '/article',
+		path: '/detail',
 	},
 ];
 const Home: React.FC = () => {
@@ -36,7 +38,7 @@ const Home: React.FC = () => {
 		<div className={'contentBody'}>
 			<Row justify={'center'}>
 				<Col>
-					<Avatar src={logo} size={150}></Avatar>
+					<Avatar src={avatar} size={150}></Avatar>
 				</Col>
 			</Row>
 			<Row justify={'center'}>
@@ -45,14 +47,16 @@ const Home: React.FC = () => {
 				</Col>
 			</Row>
 			<Row justify={'center'} gutter={4} style={{margin:0}}>
-				{menus.map((m: IMenu) => {
-					return (
-						<Col key={newGuid()}>
-							<Link className={'AppLink'} to={m.path} target={m.target}>
-								{m.title}
-							</Link>
-						</Col>
-					);
+				{RouteList.map((m: IRoute) => {
+					if(m.isMenu){
+						return (
+							<Col key={newGuid()}>
+								<Link className={'AppLink'} to={m.path} target={m.target}>
+									{m.title}
+								</Link>
+							</Col>
+						);
+					}
 				})}
 			</Row>
 			<Separator />

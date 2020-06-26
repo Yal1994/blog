@@ -1,42 +1,25 @@
 import React from 'react';
-import {
-	Router,
-	HashRouter,
-	Switch,
-	Route,
-	BrowserRouter,
-} from 'react-router-dom';
-import Home from './pages/home';
-import Project from './pages/project';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import './App.less';
-import RouterLayout from './pages/routerLayout';
-import ArticleList from './pages/articleList';
+import RouteList from './route';
 
- function App() {
-
-	const art = () => {
-		return (
-		<RouterLayout><ArticleList></ArticleList></RouterLayout>
-		)
-	}
-
+function App() {
 	return (
 		<>
 			<BrowserRouter>
-					<Switch>
-						<Route exact path="/" component={Home}></Route>
-							<Route  path="/article" component={art}></Route>
-						<Route exact path="/d" componet={RouterLayout}>
-						</Route>
-					</Switch>
+				<Switch>
+					{RouteList.map((r) => {
+						return (
+							<Route
+								key={r.path}
+								exact={r.exact}
+								component={r.component}
+								path={r.path}
+							></Route>
+						);
+					})}
+				</Switch>
 			</BrowserRouter>
-			{/* <HashRouter>
-					<Switch>
-						<Route exact path="/" component={Home}></Route>
-						<Route exact path="/article" component={ArticleList}></Route>
-						<Route exact path="/project" component={Project}></Route>
-					</Switch>
-				</HashRouter> */}
 		</>
 	);
 }
