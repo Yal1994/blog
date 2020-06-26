@@ -39,7 +39,7 @@ module.exports = {
         },
       },
     },
-    /* 别名设置 */
+    /* 别名设置  */
     {
       plugin: CracoAlias,
       options: {
