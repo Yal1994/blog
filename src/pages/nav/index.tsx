@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {Layout} from 'antd'
 import styles from './index.module.less'
-import { IMenu, menus } from '../home';
 import { Link } from 'react-router-dom';
 import Search from 'antd/lib/input/Search';
 import RouteList from '@/route';

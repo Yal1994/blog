@@ -29,7 +29,7 @@ const LineList: React.FunctionComponent<ILineListProps> = (props) => {
             _id:'1',
             createtime:'2020-06-25',
             title:'博客出生了',
-            desc:'博客前台开发完毕',
+            desc:'博客前台开始开发',
             pics:['/logo.png']
         }]
     } );

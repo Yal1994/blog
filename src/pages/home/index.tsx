@@ -9,30 +9,6 @@ import LineList from '../lineList';
 import RouteList from '@/route';
 import { IRoute } from '@/entity/entity';
 
-export interface IMenu {
-	title: string;
-	path: string;
-	target?: '_blank';
-}
-
-export const menus: IMenu[] = [
-	{
-		title: '首页',
-		path: '/',
-	},
-	{
-		title: '文章',
-		path: '/article',
-	},
-	{
-		title: 'Github',
-		path: '/article',
-	},
-	{
-		title: '简历',
-		path: '/detail',
-	},
-];
 const Home: React.FC = () => {
 	return (
 		<div className={'contentBody'}>
