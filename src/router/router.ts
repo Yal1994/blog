@@ -1,8 +1,8 @@
-import Home from './pages/home';
-import ArticleList from './pages/articleList';
-import Detail from './pages/ArticleItem';
-import { IRoute } from './entity/entity';
-import Resume from './pages/resume';
+import Home from '../pages/home';
+import ArticleList from '../pages/articleList';
+import Detail from '../pages/articleItem';
+import { IRoute } from '../entity/entity';
+import Resume from '../pages/resume';
 
 const RouteList: IRoute[] = [
 	{

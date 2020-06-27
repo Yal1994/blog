@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 
-interface ILineListProps {}
+interface IBlogHistoryListProps {}
 
 interface IArticle {
     _id:string,
@@ -21,7 +21,7 @@ interface IArticleList {
     articles:IArticle[],
 }
 
-const LineList: React.FunctionComponent<ILineListProps> = (props) => {
+const BlogHistoryList: React.FunctionComponent<IBlogHistoryListProps> = (props) => {
 	const [size, setSize] = React.useState(15);
 	const [articleList, setArticleList] = React.useState<IArticleList>({
         count:1,
@@ -81,4 +81,4 @@ const LineList: React.FunctionComponent<ILineListProps> = (props) => {
 	);
 };
 
-export default LineList;
+export default BlogHistoryList;

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Typography, Row, Col } from 'antd';
-import Title from 'antd/lib/typography/Title';
+import * as React from '@/pages/articleItem/node_modules/react';
+import { Typography, Row, Col } from '@/pages/articleItem/node_modules/antd';
+import Title from '@/pages/articleItem/node_modules/antd/lib/typography/Title';
 import IArticle from '@/entity/entity';
-import Paragraph from 'antd/lib/typography/Paragraph';
+import Paragraph from '@/pages/articleItem/node_modules/antd/lib/typography/Paragraph';
 import Separator from '@/components/Separator';
 import RouterLayout from '../routerLayout';
 

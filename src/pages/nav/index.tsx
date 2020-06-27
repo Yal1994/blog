@@ -3,7 +3,7 @@ import {Layout} from 'antd'
 import styles from './index.module.less'
 import { Link } from 'react-router-dom';
 import Search from 'antd/lib/input/Search';
-import RouteList from '@/route';
+import RouteList from '@/router/router';
 import { IRoute } from '@/entity/entity';
 
 const {Header} = Layout

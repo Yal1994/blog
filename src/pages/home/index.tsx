@@ -5,8 +5,8 @@ import './index.less';
 import { Link } from 'react-router-dom';
 import Separator from '@/components/Separator';
 import { newGuid } from '@/utils/utils';
-import LineList from '../lineList';
-import RouteList from '@/route';
+import BlogHistoryList from '../BlogHistoryList';
+import RouteList from '@/router/router';
 import { IRoute } from '@/entity/entity';
 
 const Home: React.FC = () => {
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
 			<Separator />
 			<Row justify={'center'}>
 				<Col>
-					<LineList></LineList>
+					<BlogHistoryList></BlogHistoryList>
 				</Col>
 			</Row>
 			<BackTop />

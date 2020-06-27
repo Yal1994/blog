@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import './App.less';
-import RouteList from './route';
+import RouteList from './router/router';
 
 function App() {
 	return (
