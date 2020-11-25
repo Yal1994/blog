@@ -23,7 +23,7 @@ const Resume: React.FunctionComponent<IResumeProps> = (props) => {
 			</Row>
 			<Row justify={'center'}>
 				<Col>
-                <ResumeContent></ResumeContent>
+<!--                 <ResumeContent></ResumeContent> -->
 				</Col>
 			</Row>
 			<BackTop />
